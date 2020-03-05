@@ -1,0 +1,17 @@
+<!-- <div *ngFor="let article of articles">
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description }}</p>
+
+    <a href="{{ article.url }}">Read full article</a>
+</div> -->
+
+<div style="padding: 13 px;">
+    <mat-progress-spinner *ngIf="stockSymbols.length === 0"></mat-progress-spinner>
+
+    <mat-card *ngFor="let stock of stockSymbols" style="margin-top: 10px;">
+        <mat-card-header>
+            <mat-card-title>{{ stock.stock }}</mat-card-title>
+            <mat-card-subtitle>{{ stock.code }}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
